@@ -71,7 +71,19 @@ exports.updateTodo = async (req, res) => {
 }
 
 /* DELETE API */
-exports.deleteTodo = async (req, res) => {
+exports.deleteAllTodos = async (req, res) => {
+    try {
+        // delete all todos
+        await Todo.deleteMany()
+
+        // send success message as response
+        res.status(200).json({ message: 'All todos deleted successfully' })
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+}
+
+exports.deleteSpecificTodo = async (req, res) => {
     // get the id from the request params
     const { id } = req.params
 

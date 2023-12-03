@@ -13,6 +13,7 @@ router
     .patch('/:id', todoController.updateTodo)
 
 /* DELETE */
-    .delete('/:id', todoController.deleteTodo)
+    .delete('/', todoController.deleteAllTodos)
+    .delete('/:id', todoController.deleteSpecificTodo)
 
 exports.router = router
