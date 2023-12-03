@@ -6,6 +6,10 @@
 
 Welcome to the Cosmos ICT Club WebDev Bootcamp! This repository contains resources and materials for our week-long Web Development Bootcamp. Whether you're a beginner or an experienced developer, this bootcamp aims to enhance your skills and knowledge in web development.
 
+
+##Project
+In this Bootcamp, we will build a simple todo note web-app while understanding every phase of an idea from inception to deployment. This repository contains todo note webapp developed in the Bootcamp.
+
 ## Features
 
 - **In-depth Learning**: Dive into fundamental and advanced topics in web development.
