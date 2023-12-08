@@ -1,0 +1,24 @@
+This code defines a simple Todo application using React. Let's break down the main components of the code:
+
+1. State Management:
+   - `const [todos, setTodos] = useState([]);`: Initializes a state variable `todos` using the `useState` hook. It represents the list of todos in the application.
+
+   - `const [inputValue, setInputValue] = useState('');`: Initializes a state variable `inputValue` to manage the input field's value where users enter new todo items.
+
+2. Todo Manipulation Functions:
+   - `addTodo`: Adds a new todo item to the list. It checks if `inputValue` is not empty, and if so, adds a new todo object with a unique `id`, `text` from the input, and an initial status of 'Pending'.
+
+   - `deleteTodo`: Removes a todo item from the list based on its `id`. It uses the `filter` method to create a new array excluding the todo with the specified `id`.
+
+   - `editTodo`: Modifies the text of a todo item identified by its `id`. It uses the `map` method to create a new array where the text of the targeted todo is updated.
+
+   - `toggleStatus`: Toggles the status (either 'Pending' or 'Complete') of a todo item identified by its `id`. It uses the `map` method to create a new array where the status is toggled.
+
+3. Rendering Components:
+   - The `return` statement renders the main Todo application.
+   - An `input` element allows users to type new todo items. Its value is controlled by the `inputValue` state.
+   - A "Add" `button` triggers the `addTodo` function to add a new todo item to the list.
+   - An `ul` (unordered list) displays the list of todo items using the `map` function. Each todo item is represented by an `li` (list item).
+   - For each todo item, there's a `span` displaying the todo text. The text is styled with a line-through if the status is 'Complete'.
+   - Each todo item has three buttons: "Delete," "Edit," and a button to toggle its status between 'Pending' and 'Complete'.
+
